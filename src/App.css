@@ -1,25 +1,17 @@
 .track {
-  height: 190px;
-  width: 430px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  background-color:#00be29;
+  width: 25%;
+  padding: 20px 20px;
+  margin: 20px 23px;
+  float: left;
 }
-ul {
+ ul {
   list-style: none;
 }
-
 li {
   display: inline-block;
-}
+} 
 
-.track-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 img {
   height: 190px;
@@ -56,13 +48,5 @@ h2 {
   margin-left: 180px;
   margin-top: 4em;
 }
-#track-button {
-  padding: 10px 10px;
-  margin-left: 120px;
-  margin-top: 6em;
-  border-radius: 15px; 
-  border: none;
-  background: rgba(179, 0, 0, 0.774); 
-  font-size: 18px;
-  color: #1E2125;
-}
+
+

@@ -1,18 +1,18 @@
 import React from "react";
-import './App.css';
-import data from './data/data';
-import Song from './components/index.js';
+import './App.css'; 
+import data from "./data/data";
+import Track from "./components/Track/index.js";
 
 function App() {
-  return (
 
-  <Song
-        title={data.name}
-        image={data.album.images[0].url}
-        artists={data.album.name}
-        album={data.artists[0].name}
+  return data.map((a) => (
+      <Track
+        Cover={a.album.images[1].url}
+        Judul={a.name}
+        Artist={a.artists[0].name}
+        Album={a.album.name}
       />
-);
-}
-
-export default App;
+    ));
+  }
+  
+  export default App;
