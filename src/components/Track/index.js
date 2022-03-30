@@ -1,18 +1,12 @@
-const Track = ({ Judul, Artist, Album, Cover }) => {
+const Track = (props) => {
     return (
-   <div className="track">
-     <ul>
-        <li><img src={Cover} alt="Album" /></li>
-         <li className="detail">
-           <h1 id="track-artist">{Artist}</h1>
-           <h4 id="track-album">{Album}</h4>
-           <h2 id="track-tittle">{Judul}</h2>
-           <button id="btn-play">Play</button>
-         </li>
-       </ul>
-     </div>
+      <div className="image-card">
+        <img src={props.image_url} title={props.album_name} alt="{props.album_name}" className="object-cover rounded h-40 w-full"/>
+        <p className="tiltle-song">{props.track_title}</p>
+        <div className="">
+          <p className="artist-name">{props.artist_name}</p>
+        </div>
+      </div>
     );
   }
-export default Track;
-
-
+  export default Track;
