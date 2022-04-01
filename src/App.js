@@ -8,7 +8,29 @@ function App() {
   const [access_token, set_access_token] = useState(null);
   const [query, set_query] = useState('');
   const [tracks, set_tracks] = useState([]);
+  const [selectedTrackURI, setSelectedTrackURI] = useState([]);
 
+
+  useEffect(() => {
+    if (!setSelectedTrackURI) {
+      const selectedTracks = filterSelectedTracks();
+
+      set_tracks(selectedTracks);
+    }
+  }, [selectedTrackURI]);
+  const filterSelectedTracks = () => {
+    return tracks.filter((track) => selectedTrackURI.includes(tracks.uri));
+  };
+
+  const toggleSelect = (tracks) => {
+    const uri = tracks.uri;
+
+    if (selectedTrackURI.includes(uri)) {
+      setSelectedTrackURI(selectedTrackURI.filter((item) => item !== uri));
+    } else {
+      setSelectedTrackURI([...selectedTrackURI, uri]);
+    }
+  };
   const SearchBox = () => {
     return (
       <div className="box">
@@ -72,6 +94,7 @@ function App() {
               artist_name={item.album.artists[0].name}
               track_title={item.name}
               album_name={item.album.name}
+              toggleSelect={() => toggleSelect(tracks)}
             />
           );
         })}

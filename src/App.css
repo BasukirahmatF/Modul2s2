@@ -1,13 +1,38 @@
 .image-card {
-  background-color:#00be29;
+  /* 
   grid-gap: 20px;
-  width: 100%;
+  width: 30%;
   padding: 0%;
-  margin: 0%;
+  margin: 0%; */
+  display: inline-grid;
+  margin-left: 0.8em;
+  
+  
 }
-
+.box{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.box button{
+  background:#1fd100;
+  margin-left: 1em;
+  border-radius: 1em;
+  padding: 0 1em;
+}
 img {
   height: auto;
   width: 190px;
   border-style: double;
+}
+.button-login {
+  margin:  1em auto 2em;
+  max-width: 100px;
+  display: block;
+    border-radius: 2em;
+    background:#1fd100;
+    padding: 2em 1em;
+    font-size: 1.25em;
+    font-family: helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
 }
