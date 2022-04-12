@@ -6,12 +6,15 @@ const Track = (props) => {
     setIsSelected(!isSelected);
    
   };
+  
+
     return (
+      <div className="displaysong">
       <div className="image-card">
         <img src={props.image_url} title={props.album_name} alt="{props.album_name}" className="object-cover rounded h-40 w-full"/>
-        <p className="tiltle-song">{props.track_title}</p>
-        <div className="">
-          <p className="artist-name">{props.artist_name}</p>
+        <div className="infosong">
+        <p>{props.track_title}</p>
+          <p>{props.artist_name}</p>
           <button
               className={`btn btn-select ${
                 isSelected ? "btn-primary" : "btn-secondary"
@@ -21,7 +24,7 @@ const Track = (props) => {
               {isSelected ? "Deselect" : "Select"}
             </button>
         </div>
-
+        </div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 const LoginButton = () => {
 
     let client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-    let scope = 'playlist-modify-private';
+    let scope = 'playlist-modify-private playlist-modify-public';
     let redirect_uri = 'http://localhost:3000';
     let spotify_url = 'https://accounts.spotify.com/authorize';
         spotify_url += '?response_type=token';
@@ -16,3 +16,4 @@ const LoginButton = () => {
     );
   }
   export default LoginButton;
+  export let spotify_url;
