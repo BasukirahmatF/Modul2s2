@@ -1,3 +1,6 @@
+import React from "react";
+import Button from '@mui/material/Button';
+
 const LoginButton = () => {
 
     let client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
@@ -10,9 +13,11 @@ const LoginButton = () => {
         spotify_url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
 
     return (
-      <a href={spotify_url} className="button-login">
-        LOGIN 
-      </a>
+      // <a href={spotify_url} className="button-login">
+      //   LOGIN 
+      // </a>
+      <Button href={spotify_url} variant="contained">LOGIN </Button>
+    
     );
   }
   export default LoginButton;
