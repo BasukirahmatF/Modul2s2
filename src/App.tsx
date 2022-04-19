@@ -20,7 +20,7 @@ function App() {
     }
   }, [selectedTrackURI]);
   const filterSelectedTracks = () => {
-    return tracks.filter((track) => selectedTrackURI.includes(tracks.uri));
+    return tracks.filter((tracks) => selectedTrackURI.includes(tracks.uri));
   };
 
   const toggleSelect = (tracks) => {
