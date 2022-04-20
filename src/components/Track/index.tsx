@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 const Track = (props) => {
   const [isSelected, setIsSelected] = useState(false);
 
@@ -27,5 +28,11 @@ const Track = (props) => {
         </div>
       </div>
     );
+  }
+  Track.propTypes = {
+    image_url: PropTypes.arrayOf(PropTypes.element),
+    album_name: PropTypes.bool,
+    track_title: PropTypes.bool,
+    artist_name: PropTypes.bool 
   }
   export default Track;

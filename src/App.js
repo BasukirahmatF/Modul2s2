@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Track from "./components/Track";
-import LoginButton from "./components/button";
-import './components/Apps/index.'; 
+import Track from "./components/Track/index.tsx";
+import LoginButton from "./components/button/index.tsx";
 import './App.css';
 
 function App() {
@@ -67,7 +66,7 @@ function App() {
     let hashParams = {};
     let x, l = /([^&;=]+)=?([^&;]*)/g,
       tamp = window.location.hash.substring(1);
-    while ( x = l.exec(tamp)) {
+    while (( x = l.exec(tamp))) {
       hashParams[x[1]] = decodeURIComponent(x[2]);
     }
     return hashParams;
