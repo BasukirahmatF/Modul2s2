@@ -1,3 +1,11 @@
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+body{
+  background-color: rgb(0, 58, 108);
+}
 .displaysong {
   grid-gap: 20px;
   width: 30%;
@@ -5,15 +13,17 @@
   margin-top: 1%;
   display: inline-grid;
   border: 1px solid rgb(83, 83, 83);
-  margin-left: 0.8em;
-  background-color: rgb(67, 67, 67);
+  margin-left: 1.5em;
+  background-color: rgb(1, 137, 60);
+  justify-content: center;
 }
+
 
 .image-card {
   width: max-content;
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   text-align: center;
   font-weight: bold;
@@ -38,6 +48,13 @@
   color: rgb(255, 255, 255);
   width: 120px;
   margin-left: 1em;
+}
+.btn-login{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
 }
 
 .box{
@@ -66,4 +83,74 @@ img {
     font-family: helvetica, sans-serif;
     text-align: center;
     cursor: pointer;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #646464;
+  border-radius: 5em;
+  font-size: 18px;
+  
+}
+.navbar .navbar-brand{
+  margin-left: 2em;
+  text-shadow: #1fd100;
+}
+.form input,
+textarea {
+  border-radius: 5px;
+  border: 1px solid #575757;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #333333;
+}
+.btn-primary {
+  background-color: #1DB954;
+  margin-right: 2em;
+}
+.btn-secondary {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: 500;
+}
+.btn-create {
+  margin: 20px 0px;
+  height: 40px;
+  width: 300px;
+}
+.form-playlist .form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 300px;
+  padding-left: 1.5em;
+  box-shadow: 0 0 30px rgba(#000000, .1);
+  margin-top: 3em;
+  margin-bottom: -3em;
+}
+.form-playlist .form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-playlist textarea {
+  resize: none;
+  height: 80px;
+}
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 70%;
+  margin-bottom: 2%;
+  margin-top: -3%;
+}
+.search-wrapper .form .form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.search-wrapper input {
+  width: 80%;
 }
