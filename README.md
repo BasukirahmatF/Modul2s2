@@ -38,7 +38,7 @@ To run this project, you will need to add the following environment variables to
 
 `REACT_APP_SPOTIFY_ID` your spotify developer client id.
 
-see [.env.example](/.env.example)
+see [.env.example](/.env)
 
 
 ## Getting Started
